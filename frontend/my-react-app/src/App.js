@@ -7,7 +7,7 @@ function App() {
   const [getMessage, setGetMessage] = useState({})
 
   useEffect(()=>{
-    axios.get('https://survery-demo-app.herokuapp.com/flask/hello').then(response => {
+    axios.get('https://git.heroku.com/survery-demo-app.git/flask/hello').then(response => {
       console.log("SUCCESS", response)
       setGetMessage(response)
     }).catch(error => {
