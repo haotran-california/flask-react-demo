@@ -15,4 +15,3 @@ def serve(path):
 
 api.add_resource(HelloApiHandler, '/flask/hello')
 
-app.run(debug=True)
