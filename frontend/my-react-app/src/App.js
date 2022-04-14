@@ -30,3 +30,39 @@ function App() {
 }
 
 export default App;
+
+function Form() {
+  const [getMessage, setGetMessage] = useState({})
+
+  useEffect(()=>{
+    axios.get('https://git.heroku.com/survery-demo-app.git/flask/hello').then(response => {
+      console.log("SUCCESS", response)
+      setGetMessage(response)
+    }).catch(error => {
+      console.log(error)
+    })
+
+  }, [])
+  return (
+  <html>
+      <head> 
+        <meta charset="utf-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <title>Test</title> 
+        
+    </head> 
+    <body> 
+      <div id="wrapper" data-tf-widget="v8vIyHFe" data-tf-inline-on-mobile data-tf-medium="snippet" ></div> 
+      <script src="//embed.typeform.com/next/embed.js"></script> 
+    </body> 
+  </html>
+  );
+}
+
+
+
+
+
+
+
+
